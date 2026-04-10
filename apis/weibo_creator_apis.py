@@ -166,7 +166,7 @@ class WeiboCreaterApis():
 
 if __name__ == '__main__':
     weiboCreaterApis = WeiboCreaterApis()
-    cookies_str = r'SCF=Au_GyJ8iteBAfwdVEZ_cTzHjL13gtYJnx3ir5oYS4KWlAYwEX650ITNv_jbaVQSvEH0ObyvpU12X-jeywQtAlkE.; XSRF-TOKEN=mJR785WNTS3b4Sj-1LnfASbv; ALF=1742442718; SUB=_2A25KsHOODeRhGeFH61cU8CzLzTqIHXVpzIlGrDV8PUJbkNANLVj7kW1NeDzyIFo3rwxRbOidrQdH5oseW2-okybD; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WFoWb6hF8xRil7mObi0Syxr5JpX5KMhUgL.FoM4eh-fehzNSoq2dJLoIp7LxKML1KBLBKnLxKqL1hnLBoMN1K5fSK5ES0qc; WBPSESS=F-g56V5WRtN66TC4al6V9tfDALQepO3wdKzNdX8UFRN0yUFWC87tjsobYxaila_lirV58SgfvK63GmHqfqQCGQQ5dL2E40TzSWzvIk-dkv6xi7aqXdJdzVTe4QMvPX5_-8ULgZail3vseXzpYKojog=='
+    cookies_str = r''
     noteInfos = [
         {
             # 描述
