@@ -6,7 +6,7 @@ import json
 
 import pandas as pd
 import requests
-from utils.WeiboUtils import get_common_headers, trans_cookies, get_html_headers
+from utils.weibo_utils import get_common_headers, trans_cookies, get_html_headers
 
 
 class WeiboApis():

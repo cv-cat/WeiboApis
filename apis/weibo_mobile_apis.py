@@ -1,7 +1,7 @@
 import re
 import json
 import requests
-from utils.WeiboMobileUtils import get_search_headers, get_detail_headers
+from utils.weibo_mobile_utils import get_search_headers, get_detail_headers
 
 class WeiboMobileApis():
 

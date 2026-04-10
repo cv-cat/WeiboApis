@@ -1,11 +1,11 @@
 import time
 import json
 import requests
-from WeiboApis import WeiboApis
-from utils.WeiboCreatorUtils import generate_upload_image_media_headers, generate_upload_image_media_params, \
+from apis.weibo_apis import WeiboApis
+from utils.weibo_creator_utils import generate_upload_image_media_headers, generate_upload_image_media_params, \
     generate_session_id, get_form_headers, generate_upload_video_media_headers, generate_upload_video_media_params, \
     generate_video_check_headers, generate_video_output_headers, get_post_image_headers, get_post_video_headers
-from utils.WeiboUtils import trans_cookies
+from utils.weibo_utils import trans_cookies
 from loguru import logger
 class WeiboCreaterApis():
 

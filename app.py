@@ -2,8 +2,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from apis.WeiboApis import WeiboApis
-from apis.WeiboMobileApis import WeiboMobileApis
+from apis.weibo_apis import WeiboApis
+from apis.weibo_mobile_apis import WeiboMobileApis
 
 weiboMobileApis = WeiboMobileApis()
 weiboapis = WeiboApis()
