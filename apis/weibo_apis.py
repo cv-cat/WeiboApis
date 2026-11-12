@@ -137,6 +137,63 @@ class WeiboApis():
             msg = str(e)
         return success, msg, res_json
 
+    """
+        获取推荐流（网页「热门」页同一条流）
+        :param since_id: 翻页参数，首页传 "0"，之后把上一页响应里的 since_id 对象原样序列化后传入
+        :param cookies_str: cookies
+    """
+    def getHotTimeline(self, since_id: str, cookies_str: str, proxies: dict = None):
+        success = True
+        msg = "成功"
+        res_json = None
+        try:
+            api = "/ajax/feed/hottimeline"
+            params = {
+                "since_id": since_id or "0",
+                "refresh": "0",
+                "group_id": "102803",
+                "containerid": "102803",
+                "extparam": "discover|new_feed",
+                "max_id": "0",
+                "count": "20"
+            }
+            cookies = trans_cookies(cookies_str)
+            headers = get_common_headers(cookies)
+            response = requests.get(self.base_url + api, headers=headers, cookies=cookies, params=params)
+            res_json = response.json()
+        except Exception as e:
+            success = False
+            msg = str(e)
+        return success, msg, res_json
+
+    """
+        获取关注流（关注的人的最新微博）
+        :param max_id: 翻页参数，首页传空，之后传上一页响应里的 max_id
+        :param cookies_str: cookies
+    """
+    def getFriendsTimeline(self, max_id: str, cookies_str: str, proxies: dict = None):
+        success = True
+        msg = "成功"
+        res_json = None
+        try:
+            api = "/ajax/feed/friendstimeline"
+            params = {
+                "list_id": "",
+                "refresh": "4",
+                "since_id": "0",
+                "count": "20"
+            }
+            if max_id:
+                params["max_id"] = max_id
+            cookies = trans_cookies(cookies_str)
+            headers = get_common_headers(cookies)
+            response = requests.get(self.base_url + api, headers=headers, cookies=cookies, params=params)
+            res_json = response.json()
+        except Exception as e:
+            success = False
+            msg = str(e)
+        return success, msg, res_json
+
     def get_user_all_posted(self, user_url, cookies_str):
         since_id = ""
         res = []
